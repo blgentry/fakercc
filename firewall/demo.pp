@@ -1,3 +1,5 @@
+# MASTER and OLDER fix 1
+# 
 # Boiler plate stuff for every firewall rule class
 #
 # IMPORTANT: set class name below to match file name.
