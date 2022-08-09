@@ -1,3 +1,9 @@
+# DNS Firewall fix #1
+#
+#
+# It's fixed
+#
+#
 # Boiler plate stuff for every firewall rule class
 #
 # IMPORTANT: set class name below to match file name.
