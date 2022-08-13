@@ -37,6 +37,14 @@ class rcc_firewalld::idhi {
     action  => 'accept',
   }
 
+  firewalld_rich_rule { 'HTTP from rcc_networks':
+    ensure  => present,
+    zone    => 'rcczone',
+    source  => { 'ipset'  => 'rcc_networks' },
+    service => 'http',
+    action  => 'accept',
+  }
+
   firewalld_rich_rule { 'ICMP from rcc_networks':
     ensure  => present,
     zone    => 'rcczone',
