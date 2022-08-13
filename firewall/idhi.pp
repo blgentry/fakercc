@@ -59,7 +59,7 @@ class rcc_firewalld::idhi {
     zone   => 'rcczone',
     source => { 'ipset' => 'rcc_networks' },
     port   => {
-      'port'     => 8888,
+      'port'     => 8080,
       'protocol' => 'tcp',
     },
     action => 'accept',
