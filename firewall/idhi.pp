@@ -53,6 +53,18 @@ class rcc_firewalld::idhi {
     action  => 'accept',
   }
 
+
+  firewalld_rich_rule { '8080 from rcc_networks':
+    ensure => present,
+    zone   => 'rcczone',
+    source => { 'ipset' => 'rcc_networks' },
+    port   => {
+      'port'     => 8888,
+      'protocol' => 'tcp',
+    },
+    action => 'accept',
+  }
+}
   firewalld_rich_rule { 'Bacula from rcc_networks':
     ensure  => present,
     zone    => 'rcczone',
